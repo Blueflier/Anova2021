@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var tabURL = tabs[0].url;
             console.log(tabURL);
     });
-            document.getElementById("checkPage").innerHTML = "Inspect the Extension";
+            document.getElementById("checkPage").innerHTML = "tabURL";
 
     }, false);
 
