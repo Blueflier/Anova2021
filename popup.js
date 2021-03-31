@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setURL(tabURL);
     });
             document.getElementById("checkPage").innerHTML = URL;
-
+            chrome.declarativeContent.setIcon();
     }, false);
 
     function setURL(url){
