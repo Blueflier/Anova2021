@@ -20,5 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
         URL = url;
     };
 
-}, false);
+    console.log("helloooo");
 
+}, false);

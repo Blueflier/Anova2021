@@ -7,9 +7,25 @@
     <script src="popup.js"></script>
   </head>
   <body>
-    <h1>Getting Url Simply
+    <h1 id="Title">This Website's Score Is:
 
     </h1>
+    <h1 id="url"></h1>
+
+    <script>
+      
+
+      chrome.tabs.query({
+            active:true,
+            currentWindow:true
+        }, function(tabs){
+            var tabURL = tabs[0].url;
+            console.log(tabURL);
+            setURL(tabURL);
+            document.getElementById("url").innerHTML =tabURL;
+        });
+    </script>
+
     <button id="checkPage">Click Here</button>
   </body>
 </html>
