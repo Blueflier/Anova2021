@@ -1,5 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     
+    // var inter = window.setInterval(function(){
+    //     console.log("every 2 seoncds");
+
+    // },3000)
+
+    chrome.browserAction.setIcon({path: {19:"images/icon.png"}});
+
     var checkPageButton = document.getElementById('checkPage');
 
 
@@ -28,3 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
     //     URL = url;
     // };
 }, false);
+
+// function isTabChanged(){
+//     if(id!=previous id){
+//         return true;
+//     }
+// };
