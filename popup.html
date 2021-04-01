@@ -1,9 +1,8 @@
 <!doctype html>
 <html>
   <head>
-    <title>Getting Url Simply
-
-    </title>
+    <title>Getting Url Simply </title>
+    <script src="fileReader.js"></script>
     <script src="popup.js"></script>
   </head>
   <body>
@@ -12,19 +11,6 @@
     </h1>
     <h1 id="url"></h1>
 
-    <script>
-      
-
-      chrome.tabs.query({
-            active:true,
-            currentWindow:true
-        }, function(tabs){
-            var tabURL = tabs[0].url;
-            console.log(tabURL);
-            setURL(tabURL);
-            document.getElementById("url").innerHTML =tabURL;
-        });
-    </script>
 
     <button id="checkPage">Click Here</button>
   </body>
