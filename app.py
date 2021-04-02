@@ -15,12 +15,38 @@ def home():
 def login():
    message = None
    if request.method == 'POST':
-        datafromjs = request.form['mydata']
-        result = "return this"
+        tabURL = request.form['mydata']
+        
+        result = str(score(tabURL)) #What gets returned to Javascript
+
         resp = make_response('{"response": '+result+'}')
         resp.headers['Content-Type'] = "application/json"
         return resp
         return render_template('login.html', message='')
+
+
+from urllib.parse import urlparse
+
+
+#print(url_domain)
+
+extension_dict = {
+    ".com": 10,
+    ".edu": 80,
+    ".gov": 100,
+    ".org": 69,
+    ".us": 40
+}
+
+def score(url_domain):
+    
+    url_domain = urlparse(url_domain).netloc
+    print(url_domain)
+    for x in extension_dict:
+        if x in url_domain:
+            # print(x)
+            # print("score is:", extension_dict[x])
+            return extension_dict[x]
 
 if __name__ == "__main__":
     app.run(debug = True)

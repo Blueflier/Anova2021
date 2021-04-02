@@ -1,10 +1,10 @@
 {
     "manifest_version": 2,
-  
+
     "name": "url getter",
     "description": "This extension will get the url in console",
     "version": "1.0",
-  
+
     "browser_action": {
         "default_icon": {
         "6": "Resized image/Default.png",
@@ -13,11 +13,7 @@
         "default_popup": "popup.html"
         },
         "content_security_policy": "script-src 'self' https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js; object-src 'self'",
-
         "permissions": [
         "activeTab"
         ]
   }
-
-
-  

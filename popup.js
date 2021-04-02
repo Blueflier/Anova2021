@@ -1,8 +1,6 @@
 
 
-var tabURL = undefined;
 
-//input tabURL into python code
 
 
 
@@ -14,15 +12,17 @@ chrome.tabs.query({
     currentWindow:true
 }, function(tabs){
     var tabURL = tabs[0].url;
+    console.log(tabURL);
+    var result = runPyScript(tabURL);
 });
 
 function setURL(url){
 tabURL = url;
 };
 
-const inputURL = tabURL;
 
-var result = runPyScript(tabURL);
+
+
 
 
 
