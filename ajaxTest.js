@@ -10,7 +10,7 @@ function runPyScript(input){
     return jqXHR.responseText;
 }
 
-console.log("okay");
+
 datatosend = 'this is my matrix';
 result = runPyScript(datatosend);
-console.log('Got back ' + result);
+
