@@ -10,11 +10,11 @@ url_domain = urlparse(url).netloc
 print(domain)
 
 extension_dict = {
-    ".com": 5,
-    ".edu": 17,
-    ".gov": 77,
-    ".org": 3,
-    ".us": 4
+    ".com": 10,
+    ".edu": 80,
+    ".gov": 100,
+    ".org": 69,
+    ".us": 40
 }
 
 def score(url_domain):

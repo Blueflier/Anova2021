@@ -1,43 +1,71 @@
+
+
+var tabURL = undefined;
+
+//input tabURL into python code
+
+function setIcon(score){
+    if(score>=90){
+        chrome.browserAction.setIcon({path: {1:"Resized image/A.png"}});
+    }
+    else if(score>=80){
+        chrome.browserAction.setIcon({path: {2:"Resized image/B.png"}});
+    }
+    else if(score>=70){
+        chrome.browserAction.setIcon({path: {3:"Resized image/B.png"}});
+    }
+    else if(score>=60){
+        chrome.browserAction.setIcon({path: {4:"Resized image/B.png"}});
+    }
+    else if(score>=50){
+        chrome.browserAction.setIcon({path: {5:"Resized image/B.png"}});
+    }
+    else{
+        chrome.browserAction.setIcon({path: {6:"Resized image/Default.png"}});
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
+   
+
+    //chrome.browserAction.setIcon({path: {128:"images/icon.png"}});
+
+    var checkPageButton = document.getElementById('moreInfo');
     
-    // var inter = window.setInterval(function(){
-    //     console.log("every 2 seoncds");
-
-    // },3000)
-
-    chrome.browserAction.setIcon({path: {19:"images/icon.png"}});
-
-    var checkPageButton = document.getElementById('checkPage');
-
 
     checkPageButton.addEventListener('click', function() {
-
+        window.open("https://www.w3schools.com");
         
-    var URL;
-    chrome.tabs.query({
-        active:true,
-        currentWindow:true
-    }, function(tabs){
-        var tabURL = tabs[0].url;
-        console.log(tabURL);
-        //setURL(tabURL);
-        document.getElementById("checkPage").innerHTML = URL;
 
-    chrome.browserAction.setIcon({path: {19:"images/ALogo-38.png"}});
-
-    });
 
 }, false);
 
     
    
-    // function setURL(url){
-    //     URL = url;
-    // };
+    
 }, false);
 
-// function isTabChanged(){
-//     if(id!=previous id){
-//         return true;
-//     }
+
+
+
+// chrome.tabs.query({
+//     active:true,
+//     currentWindow:true
+// }, function(tabs){
+//     var tabURL = tabs[0].url;
+// });
+
+// function setURL(url){
+//     URL = url;
 // };
