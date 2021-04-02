@@ -16,7 +16,7 @@ def login():
    message = None
    if request.method == 'POST':
         datafromjs = request.form['mydata']
-        result = score(url_domain) #What gets returned to Javascript
+        result = str(score(url_domain)) #What gets returned to Javascript
         resp = make_response('{"response": '+result+'}')
         resp.headers['Content-Type'] = "application/json"
         return resp
