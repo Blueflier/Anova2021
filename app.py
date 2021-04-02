@@ -18,7 +18,7 @@ def login():
         tabURL = request.form['mydata']
         result = str(score(tabURL)) #What gets returned to Javascript
         print(result)
-        resp = make_response('{"response": '+result+'}')
+        resp = make_response(result)
         resp.headers['Content-Type'] = "application/json"
         return resp
         return render_template('login.html', message='')

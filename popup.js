@@ -11,9 +11,11 @@ chrome.tabs.query({
     active:true,
     currentWindow:true
 }, function(tabs){
-    var tabURL = tabs[0].url;
+    tabURL = tabs[0].url;
     
     var result = runPyScript(tabURL);
+    setIcon(parseInt(result));
+    console.log((result));
 });
 
 function setURL(url){
@@ -29,8 +31,12 @@ tabURL = url;
 
 
  function setIcon(data){
+     console.log("please" + data);
+    if (typeof data == 'number') {
+        console.log("cheese me please its a number");
+      }
     if(data>=90){
-        chrome.browserAction.setIcon({path: {1:"Resized image/A.png"}});
+        chrome.browserAction.setIcon({path: {38:"Resized image/A.png"}});
     }
     else if(data>=80){
         chrome.browserAction.setIcon({path: {2:"Resized image/B.png"}});

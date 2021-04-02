@@ -8,7 +8,7 @@
     "browser_action": {
         "default_icon": {
         "6": "Resized image/Default.png",
-        "1":  "Resized image/A.png"
+        "38": "Resized image/A.png"
         },         
         "default_popup": "popup.html"
         },
