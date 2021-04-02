@@ -4,6 +4,9 @@ Date: Tuesday, March 20th, 2021
 Purpose: Returns the score of a website url based on the extension
 """
 from urllib.parse import urlparse
+import requests
+
+
 
 url = 'https://www.npr.org/sections/news/'
 url_domain = urlparse(url).netloc
