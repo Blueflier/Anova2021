@@ -14,6 +14,7 @@ chrome.tabs.query({
     var tabURL = tabs[0].url;
     console.log(tabURL);
     var result = runPyScript(tabURL);
+    console.log('Got back ' + result);
 });
 
 function setURL(url){
@@ -54,26 +55,21 @@ tabURL = url;
 
 
 document.addEventListener('DOMContentLoaded', function() {
-   
+
 
     //chrome.browserAction.setIcon({path: {128:"images/icon.png"}});
 
     var checkPageButton = document.getElementById('moreInfo');
-    
+
 
     checkPageButton.addEventListener('click', function() {
         window.open("https://www.w3schools.com");
-        
 
 
-}, false);
 
-    
-   
-    
 }, false);
 
 
 
 
-
+}, false);
