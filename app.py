@@ -16,9 +16,8 @@ def login():
    message = None
    if request.method == 'POST':
         tabURL = request.form['mydata']
-        
         result = str(score(tabURL)) #What gets returned to Javascript
-
+        print(result)
         resp = make_response('{"response": '+result+'}')
         resp.headers['Content-Type'] = "application/json"
         return resp
@@ -39,13 +38,13 @@ extension_dict = {
 }
 
 def score(url_domain):
-    
-    url_domain = urlparse(url_domain).netloc
-    print(url_domain)
+
+    url_domain = str(urlparse(url_domain).netloc)
+    #print(url_domain)
     for x in extension_dict:
+        #print(x)
         if x in url_domain:
-            # print(x)
-            # print("score is:", extension_dict[x])
+            #print(extension_dict[x])
             return extension_dict[x]
 
 if __name__ == "__main__":
