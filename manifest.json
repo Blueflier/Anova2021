@@ -4,19 +4,20 @@
     "name": "url getter",
     "description": "This extension will get the url in console",
     "version": "1.0",
-    "background":{
-        "scripts": ["test.js"],
-        "persistent": false
+    "background": {
+      "scripts": ["jquery.js", "background.js"],
+      "persistent": false
     },
     "browser_action": {
         "default_icon": {
-    
+
         "38": "images/Default.png"
-        },         
+        },
         "default_popup": "popup.html"
         },
-        "content_security_policy": "script-src 'self' https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js; object-src 'self'",
-        "permissions": [
-        "activeTab"
-        ]
+    "content_security_policy": "script-src 'self' https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js; object-src 'self'",
+    "permissions": [
+      "activeTab",
+      "tabs"
+    ]
   }

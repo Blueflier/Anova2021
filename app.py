@@ -15,9 +15,11 @@ def home():
 def login():
    message = None
    if request.method == 'POST':
-        tabURL = request.form['mydata']
-        print(tabURL)
-        result = str(score(tabURL)) #What gets returned to Javascript
+        if 'mydata' in request.form:
+            tabURL = request.form['mydata']
+            result = str(score(tabURL)) #What gets returned to Javascript
+        else:
+            result= "no_change" # Sometimes a junky POST request is made, this filters out those bad POST requests
         resp = make_response(result)
         resp.headers['Content-Type'] = "application/json"
         return resp
