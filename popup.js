@@ -10,19 +10,33 @@ var tabURL;
     }, function(tabs){
         tabURL = tabs[0].url;
         var result = runPyScript(tabURL);
+        console.log(tabURL)
+        console.log(result);
         setIcon(parseInt(result));
+
     });
 //}
 
 function setURL(url){
-tabURL = url;
+  tabURL = url;
 };
 
+function runPyScript(input){
+    var jqXHR = $.ajax({
+        type: "POST",
+        url: "http://127.0.0.1:5000/login",
+        async: false,
+        data: { mydata: input },
+        crossDomain: true
+    });
+
+    return jqXHR.responseText;
+}
 
 function setIcon(data){
 
     if(data>=90){ //.gov
-        chrome.browserAction.setIcon({tabId: tab.id, path: {38:"images/A.png"}});
+        chrome.browserAction.setIcon({path: {38:"images/A.png"}});
     }
     else if(data>=80){ //edu
         chrome.browserAction.setIcon({path: {38:"images/B.png"}});
@@ -49,10 +63,5 @@ document.addEventListener('DOMContentLoaded', function() {
         window.open("https://www.w3schools.com");
 
 }, false);
-  
+
 }, false);
-
-
-
-
-

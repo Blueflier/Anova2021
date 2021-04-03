@@ -16,8 +16,8 @@ def login():
    message = None
    if request.method == 'POST':
         tabURL = request.form['mydata']
+        print(tabURL)
         result = str(score(tabURL)) #What gets returned to Javascript
-        print(result)
         resp = make_response(result)
         resp.headers['Content-Type'] = "application/json"
         return resp
