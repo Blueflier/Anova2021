@@ -11,11 +11,11 @@ print(url_domain)
 
 
 extension_dict = {
-    ".com": 10,
+    ".com": 51,
     ".edu": 80,
-    ".gov": 100,
-    ".org": 69,
-    ".us": 40
+    ".gov": 90,
+    ".org": 70,
+    ".us": 60
 }
 
 def score(url_domain):

@@ -30,11 +30,11 @@ from urllib.parse import urlparse
 #print(url_domain)
 
 extension_dict = {
-    ".com": 10,
+    ".com": 50,
     ".edu": 80,
     ".gov": 100,
-    ".org": 69,
-    ".us": 40
+    ".org": 70,
+    ".us": 60
 }
 
 def score(url_domain):
