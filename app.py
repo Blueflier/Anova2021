@@ -25,11 +25,7 @@ def login():
         return resp
         return render_template('login.html', message='')
 
-
 from urllib.parse import urlparse
-
-
-#print(url_domain)
 
 extension_dict = {
     ".com": 50,
@@ -51,3 +47,4 @@ def score(url_domain):
 
 if __name__ == "__main__":
     app.run(debug = True)
+

@@ -66,16 +66,18 @@ function setIcon(data){
     }
     else{
         chrome.browserAction.setIcon({path: {38:"images/Default.png"}});
-        console.log('ran okay')
     }
 }
 
+
+
+
 // document.addEventListener('DOMContentLoaded', function() {
 
-    // var checkPageButton = document.getElementById('moreInfo');
+//     var checkPageButton = document.getElementById('moreInfo');
 
-    // checkPageButton.addEventListener('click', function() {
-        // window.open("https://www.w3schools.com");
+//     checkPageButton.addEventListener('click', function() {
+//         window.open("https://ccconline.libguides.com/c.php?g=242130&p=2185475");
 
 // }, false);
 
